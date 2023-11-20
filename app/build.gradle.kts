@@ -44,6 +44,9 @@ android {
 
 dependencies {
 
+    implementation(project(":domain"))
+    implementation(project(":data"))
+
     val fragmentVersion = "1.6.2"
     val navVersion = "2.7.5"
 
@@ -60,10 +63,6 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.48")
     //Coil
     implementation("io.coil-kt:coil:2.4.0")
-    //Network
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:okhttp:4.11.0")
     //Image Slider
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
     //Mask

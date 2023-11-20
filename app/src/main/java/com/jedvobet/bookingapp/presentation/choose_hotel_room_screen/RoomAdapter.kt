@@ -10,14 +10,16 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.jedvobet.bookingapp.R
 import com.jedvobet.bookingapp.databinding.CardHotelRoomBinding
-import com.jedvobet.bookingapp.domain.entities.hotel_room_entities.Room
 import com.jedvobet.bookingapp.presentation.hotel_screen.PeculiaritiesAdapter
+import com.jedvobet.domain.entities.hotel_room_entities.Room
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class RoomAdapter @Inject constructor() :
-    ListAdapter<Room, RoomAdapter.RoomViewHolder>(DiffCallback) {
+    ListAdapter<Room, RoomAdapter.RoomViewHolder>(
+        DiffCallback
+    ) {
 
     private lateinit var navController: NavController
 
@@ -41,6 +43,7 @@ class RoomAdapter @Inject constructor() :
                 setupPeculiaritiesAdapter(room.peculiarities)
             }
         }
+
         private fun setupPeculiaritiesAdapter(peculiarities: List<String>) {
             val peculiaritiesAdapter = PeculiaritiesAdapter(peculiarities)
             binding.filtersHotelRoomRv.adapter = peculiaritiesAdapter
@@ -63,12 +66,19 @@ class RoomAdapter @Inject constructor() :
     }
 
     companion object {
-        val DiffCallback = object : DiffUtil.ItemCallback<Room>() {
-            override fun areItemsTheSame(oldItem: Room, newItem: Room): Boolean {
+        val DiffCallback = object :
+            DiffUtil.ItemCallback<Room>() {
+            override fun areItemsTheSame(
+                oldItem: Room,
+                newItem: Room
+            ): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: Room, newItem: Room): Boolean {
+            override fun areContentsTheSame(
+                oldItem: Room,
+                newItem: Room
+            ): Boolean {
                 return oldItem.id == newItem.id
             }
 
