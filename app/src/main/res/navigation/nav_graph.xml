@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hotelFragment">
+
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.jedvobet.bookingapp.presentation.hotel_screen.HotelFragment"
+        android:label="HotelFragment" >
+        <action
+            android:id="@+id/action_hotelFragment_to_hotelRoomsFragment"
+            app:destination="@id/hotelRoomsFragment">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/hotelRoomsFragment"
+        android:name="com.jedvobet.bookingapp.presentation.choose_hotel_room_screen.HotelRoomsFragment"
+        android:label="HotelRoomsFragment" >
+        <argument
+            android:name="hotelName"
+            app:argType="string"
+            android:defaultValue="Steigenberger Makadi" />
+        <action
+            android:id="@+id/action_hotelRoomsFragment_to_reserveHotelRoomFragment"
+            app:destination="@id/reserveHotelRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reserveHotelRoomFragment"
+        android:name="com.jedvobet.bookingapp.presentation.reserve_screen.ReserveHotelRoomFragment"
+        android:label="ReserveHotelRoomFragment" >
+        <action
+            android:id="@+id/action_reserveHotelRoomFragment_to_orderAcceptedFragment"
+            app:destination="@id/orderAcceptedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderAcceptedFragment"
+        android:name="com.jedvobet.bookingapp.presentation.order_accepted_screen.OrderAcceptedFragment"
+        android:label="OrderAcceptedFragment" >
+        <action
+            android:id="@+id/action_orderAcceptedFragment_to_hotelFragment"
+            app:destination="@id/hotelFragment" />
+    </fragment>
+</navigation>

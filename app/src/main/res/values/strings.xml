@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">BookingApp</string>
+    <string name="hotel">Отель</string>
+    <string name="price_title_string">за тур с перелётом</string>
+    <string name="to_choose_room_string">К выбору номера</string>
+    <string name="comfort_string">Удобства</string>
+    <string name="included_title">Что включено</string>
+    <string name="included_description">Самое необходимое</string>
+    <string name="not_included_title">Что не включено</string>
+    <string name="about_hotel">Об отеле</string>
+    <string name="minimal_price">от %s ₽</string>
+    <string name="detail_hotel_room">Подробнее о номере</string>
+    <string name="reserve">Бронирование</string>
+    <string name="departure_string">Вылет из</string>
+    <string name="country_title_string">Страна, город</string>
+    <string name="date">Даты</string>
+    <string name="count_nights">Кол-во ночей</string>
+    <string name="meals">Питание</string>
+    <string name="room">Номер</string>
+    <string name="hotel_string">Отель</string>
+    <string name="buyer_information">Информация о покупателе</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="info_description">Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту</string>
+    <string name="citizenship">Гражданство</string>
+    <string name="email">Почта</string>
+    <string name="add_tourist">Добавить туриста</string>
+    <string name="tour">Тур</string>
+    <string name="fuel_title">Топливный сбор</string>
+    <string name="date_tour_time">%s - %s</string>
+    <string name="price">%s ₽</string>
+    <string name="service_charge">Сервисный сбор</string>
+    <string name="total_price">К оплате</string>
+    <string name="order_accepter_desc">Подтверждение заказа №104893 может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.</string>
+    <string name="order_accepted">Ваш заказ принят в работу</string>
+    <string name="order_accepted_string">Заказ оплачен</string>
+    <string name="super_string">Супер!</string>
+</resources>
