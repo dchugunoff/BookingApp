@@ -5,14 +5,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.jedvobet.bookingapp.domain.HotelRepository
-import com.jedvobet.bookingapp.domain.entities.HotelEntity
+import com.jedvobet.domain.HotelRepository
+import com.jedvobet.domain.entities.HotelEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HotelScreenViewModel @Inject constructor(private val hotelRepository: HotelRepository) : ViewModel() {
+class HotelScreenViewModel @Inject constructor(private val hotelRepository: HotelRepository) :
+    ViewModel() {
 
     private val _hotel = MutableLiveData<HotelEntity>()
     val hotel: LiveData<HotelEntity> = _hotel
